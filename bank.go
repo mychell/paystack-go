@@ -40,7 +40,7 @@ type BVNResponse struct {
 		CallsThisMonth int `json:"calls_this_month,omitempty," bson:"calls_this_month"`
 		FreeCallsLeft  int `json:"free_calls_left,omitempty," bson:"free_calls_left"`
 	}
-	Data BVNData `json:"data" bson:"data"`
+	Data map[string]interface{} `json:"data" bson:"data"`
 }
 
 // List returns a list of all the banks.
