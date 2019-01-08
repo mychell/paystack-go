@@ -20,6 +20,14 @@ type Bank struct {
 	IsDeleted bool   `json:"is_deleted,omitempty"`
 }
 
+type BVNData struct {
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Dob       string `json:"dob"`
+	Mobile    string `json:"mobile"`
+	Bvn       string `json:"bvn"`
+}
+
 // BankList is a list object for banks.
 type BankList struct {
 	Meta   ListMeta
@@ -29,10 +37,10 @@ type BankList struct {
 // BVNResponse represents response from resolve_bvn endpoint
 type BVNResponse struct {
 	Meta struct {
-		CallsThisMonth int `json:"calls_this_month,omitempty"`
-		FreeCallsLeft  int `json:"free_calls_left,omitempty"`
+		CallsThisMonth int `json:"calls_this_month,omitempty," bson:"calls_this_month"`
+		FreeCallsLeft  int `json:"free_calls_left,omitempty," bson:"free_calls_left"`
 	}
-	BVN string
+	Data BVNData `json:"data" bson:"data"`
 }
 
 // List returns a list of all the banks.
