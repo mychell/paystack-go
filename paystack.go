@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/mitchellh/mapstructure"
+	"github.com/corpix/uarand"
 )
 
 const (
@@ -27,7 +28,7 @@ const (
 
 	// User agent used when communicating with the Paystack API.
 	// userAgent = "paystack-go/" + version
-	userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+	//userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
 )
 
 type service struct {
@@ -153,7 +154,7 @@ func (c *Client) Call(method, path string, body, v interface{}) error {
 		req.Header.Set("Content-Type", "application/json")
 	}
 	req.Header.Set("Authorization", "Bearer "+c.key)
-	req.Header.Set("User-Agent", userAgent)
+	req.Header.Set("User-Agent", uarand.GetRandom())
 
 	if c.LoggingEnabled {
 		c.Log.Printf("Requesting %v %v%v\n", req.Method, req.URL.Host, req.URL.Path)
