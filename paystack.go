@@ -27,7 +27,7 @@ const (
 
 	// User agent used when communicating with the Paystack API.
 	// userAgent = "paystack-go/" + version
-	userAgent = "Mozilla/5.0 (Unknown; Linux) AppleWebKit/538.1 (KHTML, like Gecko) Chrome/v1.0.0 Safari/538.1"
+	userAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
 )
 
 type service struct {
