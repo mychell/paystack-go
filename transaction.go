@@ -78,6 +78,7 @@ type Authorization struct {
 	Brand             string `json:"brand,omitempty"`
 	Resusable         bool   `json:"reusable,omitempty"`
 	Signature         string `json:"signature,omitempty"`
+	AccountName       string `json:"account_name,omitempty"`
 }
 
 // TransactionTimeline represents a timeline of events in a transaction session
