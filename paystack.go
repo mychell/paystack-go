@@ -21,7 +21,7 @@ const (
 	version = "0.1.0"
 
 	// defaultHTTPTimeout is the default timeout on the http client
-	defaultHTTPTimeout = 24 * time.Second
+	defaultHTTPTimeout = 20 * time.Second
 
 	// base URL for all Paystack API requests
 	baseURL = "https://api.paystack.co"
