@@ -12,8 +12,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/mitchellh/mapstructure"
 	"github.com/corpix/uarand"
+	"github.com/mitchellh/mapstructure"
 )
 
 const (
@@ -251,7 +251,7 @@ func (c *Client) decodeResponse(httpResp *http.Response, v interface{}) error {
 		if c.LoggingEnabled {
 			c.Log.Printf("Paystack error: %+v", err)
 		}
-		return newAPIError(httpResp)
+		return newAPIError(httpResp, respBody)
 	}
 
 	if c.LoggingEnabled {
