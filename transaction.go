@@ -56,7 +56,7 @@ type Transaction struct {
 	Currency        string                 `json:"currency,omitempty"`
 	IPAddress       string                 `json:"ip_address,omitempty"`
 	Log             map[string]interface{} `json:"log,omitempty"` // TODO: same as timeline?
-	Fees            float32                `json:"fees,omitempty"`
+	Fees            int                    `json:"fees,omitempty"`
 	FeesSplit       interface{}            `json:"fees_split,omitempty"` // TODO: confirm data type
 	Customer        Customer               `json:"customer,omitempty"`
 	Authorization   Authorization          `json:"authorization,omitempty"`
