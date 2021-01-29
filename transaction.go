@@ -66,19 +66,24 @@ type Transaction struct {
 
 // Authorization represents Paystack authorization object
 type Authorization struct {
-	AuthorizationCode string `json:"authorization_code,omitempty"`
-	Bin               string `json:"bin,omitempty"`
-	Last4             string `json:"last4,omitempty"`
-	ExpMonth          string `json:"exp_month,omitempty"`
-	ExpYear           string `json:"exp_year,omitempty"`
-	Channel           string `json:"channel,omitempty"`
-	CardType          string `json:"card_type,omitempty"`
-	Bank              string `json:"bank,omitempty"`
-	CountryCode       string `json:"country_code,omitempty"`
-	Brand             string `json:"brand,omitempty"`
-	Resusable         bool   `json:"reusable,omitempty"`
-	Signature         string `json:"signature,omitempty"`
-	AccountName       string `json:"account_name,omitempty"`
+	AuthorizationCode 	string `json:"authorization_code,omitempty"`
+	Bin               	string `json:"bin,omitempty"`
+	Last4             	string `json:"last4,omitempty"`
+	ExpMonth          	string `json:"exp_month,omitempty"`
+	ExpYear           	string `json:"exp_year,omitempty"`
+	Channel           	string `json:"channel,omitempty"`
+	CardType          	string `json:"card_type,omitempty"`
+	Bank              	string `json:"bank,omitempty"`
+	CountryCode       	string `json:"country_code,omitempty"`
+	Brand             	string `json:"brand,omitempty"`
+	Resusable         	bool   `json:"reusable,omitempty"`
+	Signature         	string `json:"signature,omitempty"`
+	AccountName       	string `json:"account_name,omitempty"`
+	SenderBank       	string `json:"sender_bank,omitempty"`
+	SenderBankAccountNumber string `json:"sender_bank_account_number,omitempty"`
+	SenderCountry       	string `json:"sender_country,omitempty"`
+	SenderName       	string `json:"sender_name,omitempty"`
+	Narration       	string `json:"narration,omitempty"`
 }
 
 // TransactionTimeline represents a timeline of events in a transaction session
